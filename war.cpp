@@ -40,7 +40,8 @@ class Card{
         }
         string toString(){
             string val;
-            vector<string> suitList {"", "Clubs", "Diamonds", "Hearts", "Spades"};
+            vector<string> suitList = {"", "Clubs", "Diamonds", "Hearts", "Spades"};
+
             switch(rank){
                 case 1:{
                     val = "Ace";
@@ -153,6 +154,7 @@ class Player{
             useWonPile();
         }
         if(playPile.getSize() > 0) return playPile.nextCard();
+        return playPile.nextCard();
     }
     string getName(){
         return name;
@@ -178,33 +180,38 @@ class Player{
 };
 
 class Game{
-    Player p1;
-    Player p2;
+    Player* p1;
+    Player* p2;
+    public:
+    Game(){
+        p1 = new Player("Ernie");
+        p2 = new Player("Brut");
+    }
     void play(){
         CardDeck cd;
         cd.shuffle();
         while(cd.getSize() >= 2){
-           p1.collectCard(cd.deal());
-           p2.collectCard(cd.deal());    
+           p1->collectCard(cd.deal());
+           p2->collectCard(cd.deal());    
         }
-        p1.useWonPile();
-        p2.useWonPile();
+        p1->useWonPile();
+        p2->useWonPile();
         Pile down;
         for(int t = 1; t <= 100; t++){
             if(!enoughCards(1)) break;
-            Card c1 = p1.playCard();
-            Card c2 = p2.playCard();
+            Card c1 = p1->playCard();
+            Card c2 = p2->playCard();
 
             cout << endl << "Turn " << t << ": " << endl;
-            cout << p1.getName() << ": " << c1.toString() << " ";
-            cout << p2.getName() << ": " << c2.toString() << " ";
+            cout << p1->getName() << ": " << c1.toString() << " ";
+            cout << p2->getName() << ": " << c2.toString() << " ";
             if(c1.compareTo(c2) > 0){
-                p1.collectCard(c1);
-                p1.collectCard(c2);
+                p1->collectCard(c1);
+                p1->collectCard(c2);
             }
             else if(c1.compareTo(c2) < 0){
-                p2.collectCard(c1);
-                p2.collectCard(c2);
+                p2->collectCard(c1);
+                p2->collectCard(c2);
             }
             else{
                 down.clear();
@@ -218,36 +225,37 @@ class Game{
                     cout << num << " card(s)." << endl;
                     
                     for(int m = 1; m <= num; m++){
-                        c1 = p1.playCard();
-                        c2 = p2.playCard();
+                        c1 = p1->playCard();
+                        c2 = p2->playCard();
                         down.addCard(c1);
                         down.addCard(c2);
                     }
-                    cout << p1.getName() << ": " << c1.toString() << " ";
-                    cout << p2.getName() << ": " << c2.toString() << " ";
+                    cout << p1->getName() << ": " << c1.toString() << " ";
+                    cout << p2->getName() << ": " << c2.toString() << " ";
 
                     if(c1.compareTo(c2) > 0){
-                        p1.collectCards(down);
+                        p1->collectCards(down);
                         done = true;
                     }
                     if(c2.compareTo(c1) > 0){
-                        p2.collectCards(down);
+                        p2->collectCards(down);
                         done = true;
                     }
                 } while(!done);
 
-                cout << p1.numCards() << " to " << p2.numCards();
+                cout << p1->numCards() << " to " << p2->numCards();
             }
         }
     }
 
     bool enoughCards(int n){
-        if(p1.numCards() < n || p2.numCards() < n) return false;
+        if(p1->numCards() < n || p2->numCards() < n) return false;
         return true;
     }
 
-    Player getWinner(){
-        if(p1.numCards() > p2.numCards()) return p1;
-        else if(p2.numCards() > p1.numCards()) return p2;
+    Player* getWinner(){
+        if(p1->numCards() > p2->numCards()) return p1;
+        else if(p2->numCards() > p1->numCards()) return p2;
+        return p1;
     }
 };
