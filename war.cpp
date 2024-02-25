@@ -71,9 +71,9 @@ class Card{
 };
 
 class CardDeck{
-    Card *deck;
-    int numCards;
-
+    private:
+        Card *deck;
+        int numCards;
     public:
     CardDeck(){
         deck = new Card[52];
@@ -111,6 +111,7 @@ class CardDeck{
     friend ostream operator<<(ostream& os, const Card& c);
 };
 class Pile{
+    private:
     Card pile[52];
     int front;
     int end;
@@ -141,7 +142,7 @@ class Pile{
 };
 
 class Player{
-    public:
+    private:
     string name;
     Pile playPile;
     Pile wonPile;
@@ -180,6 +181,7 @@ class Player{
 };
 
 class Game{
+    private:
     Player* p1;
     Player* p2;
     public:
