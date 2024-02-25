@@ -6,9 +6,9 @@ Sangilan, Fp O.
 
 
 ## To Do List
-|     Task     | Status | 
-|:-------------|:------:| 
-| lec proposal |   ❌   | 
-| lab config   |   ❌   | 
-| lcd study    |   ❌   | 
+|     Task     | Abads | Ami | Sangilan |
+|:-------------|:------:|:--:|:--------:| 
+| lec proposal |   ✅   | ✅ | ✅ |
+| lab config   |   🔶   | 🔶 | 🔶 | 
+| lcd study    |   🔶   | 🔶 | 🔶 |
 
