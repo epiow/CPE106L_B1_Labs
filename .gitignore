@@ -1,7 +1,7 @@
 **/*.dSYM/*
-.vscode/*
-**/a.out
-*.exe
+**/.vscode/*
+**/*.out
+**/*.exe
 **/*.ilk
 **/*.obj
 **/*.pdb
