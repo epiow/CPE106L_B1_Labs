@@ -2,3 +2,6 @@ main.dSYM/*
 .vscode/*
 **/a.out
 **/**.exe
+main.ilk/*
+main.obj/*
+vc140.pdb/*
