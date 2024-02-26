@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <random>
+#include <ctime>
 using namespace std;
 class Card{
     private:
@@ -106,6 +107,7 @@ class CardDeck{
         numCards = 52;
     }
     static int myRandom(int low, int high){
+        srand((unsigned)time(NULL));
         return (int)(rand() % (high - low) + low);
     }
     friend ostream operator<<(ostream& os, const Card& c);
