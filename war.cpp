@@ -79,14 +79,13 @@ class CardDeck{
         deck = new Card[52];
         fill();
     }
-    void shuffle(){
-        for(int next = 0; next != numCards - 1; next++){
+
+        void shuffle() {
+        for (int next = 0; next < numCards - 1; ++next) {
             int r = myRandom(next, numCards - 1);
-            Card temp = deck[next];
-            deck[next] = deck[r];
-            deck[r] = temp;
+            swap(deck[next], deck[r]);
         }
-    }
+        }
 
     Card deal(){
         numCards--;
@@ -107,7 +106,7 @@ class CardDeck{
     }
     static int myRandom(int low, int high){
         return (int)(rand() % (high - low) + low);
-    }
+    } 
     friend ostream operator<<(ostream& os, const Card& c);
 };
 class Pile{
