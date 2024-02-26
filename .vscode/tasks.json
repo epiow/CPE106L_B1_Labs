@@ -4,6 +4,7 @@
             "type": "cppbuild",
             "label": "C/C++: clang アクティブなファイルのビルド",
             "command": "/usr/bin/clang",
+
             "args": [
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
@@ -23,6 +24,7 @@
                 "isDefault": true
             },
             "detail": "デバッガーによって生成されたタスク。"
+
         }
     ],
     "version": "2.0.0"
