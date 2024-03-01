@@ -1,0 +1,7 @@
+**/*.dSYM/*
+**/.vscode/*
+**/*.out
+**/*.exe
+**/*.ilk
+**/*.obj
+**/*.pdb
