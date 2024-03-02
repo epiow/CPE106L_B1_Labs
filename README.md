@@ -8,7 +8,5 @@ Sangilan, Fp O.
 ## To Do List
 |     Task     | Abads | Ami | Sangilan |
 |:-------------|:------:|:--:|:--------:| 
-| lec proposal |   ✅   | ✅ | ✅ |
-| lab config   |   🔶   | 🔶 | 🔶 | 
-| lcd study    |   🔶   | 🔶 | 🔶 |
+| do Lab1      |   ✅   | ✅ | ✅ | 
 
