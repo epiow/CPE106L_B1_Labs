@@ -9,7 +9,7 @@ Card Player::playCard() {
         useWonPile();
     }
     if (playPile.getSize() > 0) return playPile.nextCard();
-    return Card(0, 0); // Dummy card if playPile is empty
+    return Card(0, 0); // dummy card if playPile is empty
 }
 
 void Player::collectCard(const Card& c) { wonPile.addCard(c); }

@@ -2,8 +2,9 @@
 #include "Deck.h"
 #include <iostream>
 #include <algorithm>
+using namespace std;
 
-Game::Game(const std::string& player1Name, const std::string& player2Name) {
+Game::Game(const string& player1Name, const string& player2Name) {
     player1 = new Player(player1Name);
     player2 = new Player(player2Name);
     tie = new Player("It's a tie!");
@@ -35,9 +36,9 @@ void Game::play() {
         Card c1 = player1->playCard();
         Card c2 = player2->playCard();
 
-        std::cout << std::endl << "Turn " << t << ": " << std::endl;
-        std::cout << player1->getName() << ": " << c1.toString() << " ";
-        std::cout << player2->getName() << ": " << c2.toString() << " ";
+        cout << endl << "Turn " << t << ": " << endl;
+        cout << player1->getName() << ": " << c1.toString() << " ";
+        cout << player2->getName() << ": " << c2.toString() << " ";
 
         if (c1.compareTo(c2) > 0) {
             player1->collectCard(c1);
@@ -46,7 +47,7 @@ void Game::play() {
             player2->collectCard(c1);
             player2->collectCard(c2);
         } else {
-            // War logic
+            // war logic
         }
     }
 }

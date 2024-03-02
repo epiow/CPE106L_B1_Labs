@@ -1,5 +1,7 @@
 #include "Card.h"
 #include <vector>
+#include <string>
+using namespace std;
 
 Card::Card() : rank(0), suit(0) {}
 
@@ -21,9 +23,9 @@ bool Card::equals(const Card& c) const {
     return rank == c.getRank() && suit == c.getSuit();
 }
 
-std::string Card::toString() const {
-    std::string val;
-    std::vector<std::string> suitList = {"", "Clubs", "Diamonds", "Hearts", "Spades"};
+string Card::toString() const {
+    string val;
+    vector<std::string> suitList = {"", "Clubs", "Diamonds", "Hearts", "Spades"};
 
     switch (rank) {
         case 1: val = "Ace"; break;

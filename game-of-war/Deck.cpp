@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
+using namespace std;
 
 Deck::Deck() {
     for (int r = 1; r <= 13; r++) {
