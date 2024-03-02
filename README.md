@@ -6,9 +6,12 @@ Sangilan, Fp O.
 
 
 ## To Do List
-|     Task     | Abads | Ami | Sangilan |
+|     Task (Lab1)    | Abads | Ami | Sangilan |
 |:-------------|:------:|:--:|:--------:| 
-| lec proposal |   ✅   | ✅ | ✅ |
-| lab config   |   🔶   | 🔶 | 🔶 | 
-| lcd study    |   🔶   | 🔶 | 🔶 |
-
+| Create stats.py      |      | ✅ | Excused | 
+| Add main function      |   ✅   |  | Excused | 
+| Implement median function     |   ✅   | ✅ | Excused | 
+| Implement mode function     |   ✅   |  | Excused | 
+| Implement mean function     |      | ✅ | Excused | 
+| Create text.py      |      | ✅ | Excused | 
+| Implement read function      |      | ✅ | Excused | 
