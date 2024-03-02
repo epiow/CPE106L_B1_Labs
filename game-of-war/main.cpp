@@ -1,18 +1,19 @@
-#include "war.cpp"
+#include "Game.h"
+#include <iostream>
+#include <fstream>
 using namespace std;
+
 int main() {
-  
-    //file handling
-    ifstream playersFile("players.txt"); 
+    // File handling
+    ifstream playersFile("players.txt");
     string p1Name, p2Name;
 
     if (playersFile.is_open()) {
-
         getline(playersFile, p1Name);
         getline(playersFile, p2Name);
         playersFile.close();
 
-        //initialization of game
+        // Initialization of game
         Game g(p1Name, p2Name);
         g.play();
         Player* winner = g.getWinner();
@@ -22,6 +23,7 @@ int main() {
         cerr << "Cannot open File" << endl;
     }
 
-    cout << endl << "follow me on instagram -> @abads_ok";
+    cout << endl << "Follow me on Instagram -> @abads_ok" << endl;
+    cout << "Me too @episangilannn" << endl;
     return 0;
 }
