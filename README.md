@@ -2,7 +2,7 @@
 ### Members: 
 Abadiano, Aaron B.  
 Ami, Froilan Imarx A.  
-Sangilan, Fp O.
+Sangilan, FP O.
 
 
 ## To Do List
