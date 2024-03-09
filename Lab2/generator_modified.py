@@ -7,10 +7,17 @@ and vocabulary.  Words are chosen at random.
 
 import random
 
-articles = open("articles.txt", "r")
-nouns = open("nouns.txt", "r")
-prepositions = open("prepositions.txt", "r")
-verbs = open("verbs.txt", "r")
+with open("articles.txt", "r") as article:
+    articles = article.read().split("\n")
+
+with open("nouns.txt", "r") as noun:
+    nouns = noun.read().split("\n")
+
+with open("articles.txt", "r") as preposition:
+    prepositions = preposition.read().split("\n")
+
+with open("articles.txt", "r") as verb:
+    verbs = verb.read().split("\n")
 
 def sentence():
     """Builds and returns a sentence."""
@@ -34,9 +41,9 @@ def main():
     to generate."""
     number = int(input("Enter the number of sentences: "))
     for count in range(number):
-        print(sentence())
+        print(sentence())\
+    
 
 # The entry point for program execution
 if __name__ == "__main__":
     main()
-
