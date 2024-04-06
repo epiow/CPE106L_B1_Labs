@@ -1,4 +1,4 @@
-import model_view_controller
+import model_view_controller as mvc
 from  basic_backend import *
 
 
@@ -11,37 +11,40 @@ def main():
     ]
 
     # CREATE
-    create_items(my_items)
-    create_item('beer', price=3.0, quantity=15)
+    model = mvc.ModelBasic(my_items)
+    view = mvc.View()
+    controller = mvc.Controller(model, view)
+    model.create_items(my_items)
+    model.create_item('beer', price=3.0, quantity=15)
+    view.display_item_stored('beer', my_items)
     # if we try to re-create an object we get an ItemAlreadyStored exception
     # create_item('beer', price=2.0, quantity=10)
 
     # READ
     print('READ items')
-    print(read_items())
+    controller.show_items(True)
     # if we try to read an object not stored we get an ItemNotStored exception
     # print('READ chocolate')
     # print(read_item('chocolate'))
     print('READ bread')
-    print(read_item('bread'))
-
+    controller.show_item('bread')
+    
     # UPDATE
     print('UPDATE bread')
-    update_item('bread', price=2.0, quantity=30)
-    print(read_item('bread'))
+    controller.update_item('bread', price=2.0, quantity=30)
     # if we try to update an object not stored we get an ItemNotStored exception
     # print('UPDATE chocolate')
     # update_item('chocolate', price=10.0, quantity=20)
 
     # DELETE
     print('DELETE beer')
-    delete_item('beer')
+    controller.delete_item('beer')
     # if we try to delete an object not stored we get an ItemNotStored exception
     # print('DELETE chocolate')
     # delete_item('chocolate')
 
     print('READ items')
-    print(read_items())
+    controller.show_items()
 
 if __name__ == '__main__':
     main()
