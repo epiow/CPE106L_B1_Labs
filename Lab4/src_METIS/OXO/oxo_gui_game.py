@@ -54,8 +54,8 @@ def evClick(row,col):
 		gameover = True
 	else:
 		if result == "X" or result == "O":
-		    mb.showinfo("Result",  "The winner is: {}".format(result))
-		    gameover = True
+			mb.showinfo("Result",  "The winner is: {}".format(result))
+			gameover = True
 		
 def game2cells(game):
 	table = board.pack_slaves()[0]
@@ -65,12 +65,12 @@ def game2cells(game):
 
 	
 def cells2game():
-    values = []
-    table = board.pack_slaves()[0]
+	values = []
+	table = board.pack_slaves()[0]
 	for row in range(3):
-        for col in range(3):
-            values.append(table.grid_slaves(row=row, column=col)[0]['text'])
-    return values
+		for col in range(3):
+			values.append(table.grid_slaves(row=row, column=col)[0]['text'])
+	return values
 	
 def buildBoard(parent):
 	outer = tk.Frame(parent, border=2, relief="sunken")

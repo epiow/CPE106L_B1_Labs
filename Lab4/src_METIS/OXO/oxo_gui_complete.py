@@ -72,8 +72,8 @@ def evClick(row,col):
 		status['text'] = "Game over"
 	else:
 		if result =="X" or result == "O":
-		    mb.showinfo("Result",  "The winner is: {}".format(result))
-		    status['text'] = "Game over"
+			mb.showinfo("Result",  "The winner is: {}".format(result))
+			status['text'] = "Game over"
 		
 def game2cells(game):
 	table = board.pack_slaves()[0]
@@ -86,8 +86,8 @@ def cells2game():
 	values = []
 	table = board.pack_slaves()[0]
 	for row in range(3):
-	    for col in range(3):
-                values.append(table.grid_slaves(row=row, column=col)[0]['text'])
+		for col in range(3):
+			values.append(table.grid_slaves(row=row, column=col)[0]['text'])
 	return values
 	
 def buildBoard(parent):
