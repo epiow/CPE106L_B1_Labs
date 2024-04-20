@@ -5,7 +5,7 @@
 **/*.ilk
 **/*.obj
 **/*.pdb
-**/__pycache__/*
+**/__pycache__
 **/*.pyc
 **/*.dat
 **/.DS_Store
