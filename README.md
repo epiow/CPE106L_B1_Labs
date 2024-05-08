@@ -28,3 +28,10 @@ the mvc model for collaboration in programming.
 SQL Database <br/>
 -This laboratory is an introduction to SQL databases and backend functions.
 
+## LAB6 
+MongoDB using MongoDB Compass <br/>
+-This laboratory explored upon the structure of MongoDB and the use of pymongo as a controller to fetch and get data from a MongoDB server
+
+## LAB7
+Data Visualization using Matplotlib <br/>
+-This laboratory is a hands-on practice on data visualization using Matplotlib
