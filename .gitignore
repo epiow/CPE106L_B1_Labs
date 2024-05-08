@@ -9,4 +9,4 @@
 **/*.pyc
 **/*.dat
 **/.DS_Store
-venv/
+**/.venv/*
